@@ -4,8 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hola Mundo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hola Mundo desde Claude</h1>
+  <main class="tarjeta">
+    <h1>Hola Mundo desde Claude</h1>
+    <p>Mi primera página publicada en GitHub.</p>
+    <button class="boton" id="boton">Saludame</button>
+    <div class="mensaje" id="mensaje"></div>
+  </main>
+
+  <script>
+    let clics = 0;
+    document.getElementById("boton").addEventListener("click", () => {
+      clics++;
+      document.getElementById("mensaje").textContent =
+        `¡Hola, Nicolas! Tocaste el botón ${clics} ${clics === 1 ? "vez" : "veces"}.`;
+    });
+  </script>
 </body>
 </html>

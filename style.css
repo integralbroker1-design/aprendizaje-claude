@@ -1,0 +1,90 @@
+/* Paleta y tipografía */
+:root {
+  --fondo: #0f1117;
+  --fondo-tarjeta: #181b24;
+  --texto: #e8eaf0;
+  --texto-suave: #9aa1b2;
+  --acento: #7c5cff;
+  --acento-claro: #a48bff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at top, #1c1f2b 0%, var(--fondo) 60%);
+  color: var(--texto);
+  font-family: "Poppins", system-ui, sans-serif;
+  text-align: center;
+}
+
+.tarjeta {
+  max-width: 520px;
+  padding: 48px 40px;
+  background: var(--fondo-tarjeta);
+  border: 1px solid #262a36;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, var(--texto), var(--acento-claro));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+p {
+  color: var(--texto-suave);
+  font-weight: 300;
+  margin-bottom: 32px;
+}
+
+/* Botón interactivo */
+.boton {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: var(--acento);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(124, 92, 255, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.boton:hover {
+  background: var(--acento-claro);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(124, 92, 255, 0.5);
+}
+
+.boton:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.boton:focus-visible {
+  outline: 2px solid var(--acento-claro);
+  outline-offset: 4px;
+}
+
+.mensaje {
+  margin-top: 24px;
+  min-height: 1.5em;
+  color: var(--acento-claro);
+  font-weight: 500;
+}
